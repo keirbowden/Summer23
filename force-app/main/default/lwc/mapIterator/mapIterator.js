@@ -9,7 +9,6 @@ export default class MapIterator extends LightningElement {
     }
 
     set objMap(value) {
-        console.log('Value = ' + JSON.stringify(value));
         this._objMap=value;
         if (this._objMap) {
             this.values=[];
