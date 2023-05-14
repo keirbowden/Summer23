@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Opportunity Cards">
+    </lightning-card>
+    <div class="slds-p-around_small">
+        <c-map-iterator obj-map={oppsMap}>
+            <template lwc:slot-data="value">
+                <div class="slds-p-around_small">
+                    <lightning-card class="bordered-card">
+                        <h3 slot="title">
+                            <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon>
+                            &nbsp;Opportunity
+                        </h3>
+                        <div slot="footer">
+                            {value.Id}
+                        </div>
+                        <p class="slds-p-horizontal_small">{value.Name} - {value.StageName} -&nbsp;
+                            <lightning-formatted-number
+                                value={value.Amount}
+                                format-style="currency"
+                                currency-code="GBP">
+                            </lightning-formatted-number>
+                        </p>
+                    </lightning-card>
+                </div>
+            </template>
+        </c-map-iterator>
+    </div>
+</template>

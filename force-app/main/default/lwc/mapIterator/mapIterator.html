@@ -1,0 +1,5 @@
+<template lwc:render-mode="light"> <!-- Child must be light DOM -->
+    <template for:each={values} for:item="value">
+        <slot key={value} lwc:slot-bind={value}></slot>
+    </template>
+</template>

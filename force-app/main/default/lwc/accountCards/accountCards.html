@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Account Cards">
+    </lightning-card>
+    <div class="slds-p-around_small">
+        <c-map-iterator obj-map={accountsMap}>
+            <template lwc:slot-data="value">
+                <div class="slds-p-around_small">
+                    <lightning-card class="bordered-card">
+                        <h3 slot="title">
+                            <lightning-icon icon-name="standard:account" size="small"></lightning-icon>
+                            &nbsp;Account
+                        </h3>
+                        <div slot="footer">
+                            {value.Id}
+                        </div>
+                        <p class="slds-p-horizontal_small">{value.Name}</p>
+                    </lightning-card>
+                </div>
+            </template>
+        </c-map-iterator>
+    </div>
+</template>
