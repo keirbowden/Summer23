@@ -14,4 +14,8 @@
     </classAccesses>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Summer 23 Samples</label>
+    <tabSettings>
+        <tab>Scoped_Slots</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
 </PermissionSet>
